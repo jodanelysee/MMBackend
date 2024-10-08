@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 10000
+const port = process.env.PORT || 3000
 const cors = require('cors')
 
 
@@ -406,6 +406,6 @@ app.get("/user/:userId/credit-cards", async (req, res) => {
 run().catch(console.dir);
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Example app listening on port ${port}`);
+});
